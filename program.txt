@@ -1,0 +1,15 @@
+10       // LOAD_SERIAL_TO_BUS → Recibir 8 bits y pasarlos al bus
+05       // OUT A → Mostrar en OPORT
+03       // JMP MEM[PC+1]
+08       // LOAD_SERIAL_TO_BUS → Recibe datos en serie
+0A       // LOAD_A_AFTER_SIPO → Carga valor en A
+05       // OUT A → Muestra en OPORT
+03       // JMP
+00       // Reiniciar
+02 FF    // LD A, MEM[PC+1] → Carga FF en A
+01       // LD B, A → Copia A → B
+02 00    // LD A, MEM[PC+1] → Carga 0x00 en A
+04       // ACC A, B → A = A + B
+05       // OUT A → Muestra el resultado
+03       // JMP
+05       // Vuelve a ejecutar OUT A

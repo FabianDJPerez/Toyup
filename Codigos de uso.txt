@@ -1,0 +1,2 @@
+iverilog -o toyup toyup_tb.v toyup.v ControlUnit.v countup8bitld.v countup3bitclr.v accreg8bit.v buffdreg8bit.v dreg8bit.v RAM8x64.v  
+gtkwave
